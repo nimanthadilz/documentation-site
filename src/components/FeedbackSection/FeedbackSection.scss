@@ -1,0 +1,39 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/typography";
+
+.section-feedback {
+    padding: 3rem;
+    background-color: $color-primary-3;
+    display: flex;
+    color: $color-text-1;
+    font-size: 1.8rem;
+
+    &__left {
+        width: 50%;
+    }
+
+    &__right {
+        width: 50%;
+
+        .maintext {
+            margin-bottom: 1rem;
+            
+        }
+    }
+
+    &__icon {
+        fill: $color-primary-2;
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        box-shadow: 0 .5rem .4rem rgba(#fff, .2);
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}

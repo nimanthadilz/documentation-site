@@ -1,0 +1,39 @@
+@import "../../sassStyles/variables";
+
+.sidebar {
+    background-color: $color-primary-3;
+    padding: 1rem;
+
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / -1;
+
+    &__list {
+        font-size: 1.6rem;
+        color: $color-text-2;
+        list-style: none;
+
+        &--link {
+            padding: 1.5rem;
+        }
+    }
+    
+
+}
+
+.namebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &__icon {
+        fill: #fff;
+        width: 5rem;
+        height: 5rem;
+        margin-right: .5rem;
+    }
+
+    &__text {
+        color:#fff;
+    }
+}

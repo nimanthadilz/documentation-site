@@ -1,0 +1,46 @@
+@import "../../sassStyles/variables";
+
+
+.header {
+    background-color: $color-primary-1;
+    height: 10vh;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem;
+    border-bottom: 1px solid $color-text-1;
+
+    grid-column: main-start / main-end;
+}
+
+.searchbox {
+    border: 1px solid $color-primary-2;
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    &__icon {
+        height: 1.8rem;
+        width: 1.8rem;
+        fill: $color-primary-2;
+        margin-right: .5rem;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        color: $color-primary-2;
+        font-size: 1.6rem;
+        background-color: transparent;
+        padding: .4rem 0;
+    }
+
+    &__input:active {
+        border: none;
+        outline: none;
+    }
+    
+}
