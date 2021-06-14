@@ -6,3 +6,10 @@
     font-size: 1.4rem;
     color: $color-text-2;
 }
+
+
+.link:link,
+.link:visited {
+    text-decoration: none;
+    color: currentColor;
+}

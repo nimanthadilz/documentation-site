@@ -1,0 +1,28 @@
+@import "../../sassStyles/variables";
+
+.hamburger {
+    cursor: pointer;
+    z-index: 1000;
+
+    &__bar-1, &__bar-2, &__bar-3 {
+        width: 3.5rem;
+        height: 0.3rem;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+}
+
+.hamburger-change {
+    & .hamburger__bar-1 {
+        transform: rotate(-45deg) translate(-9px, 4px);
+    }
+
+    & .hamburger__bar-2 {
+        opacity: 0;
+    }
+
+    & .hamburger__bar-3 {
+        transform: rotate(45deg) translate(-8px, -5px) ;
+    }
+}

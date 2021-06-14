@@ -1,32 +1,47 @@
 @import "../../sassStyles/variables";
 
-
 .header {
     background-color: $color-primary-1;
     height: 10vh;
-    color: #fff;
+    color: $color-white;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     padding: 3rem;
     border-bottom: 1px solid $color-text-1;
-
     grid-column: main-start / main-end;
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+    }
+
 }
 
 .searchbox {
+    margin-left: auto;
     border: 1px solid $color-primary-2;
     border-radius: 5px;
     height: 30px;
     display: flex;
     align-items: center;
     padding: 1rem;
+    width: 20rem;
+    transition: all .4s;
+
+    @media only screen and (max-width: $bp-smallest) {
+        display: none;
+    }
+
+
+    &:focus-within {
+        width: 30rem;
+    }
 
     &__icon {
         height: 1.8rem;
         width: 1.8rem;
         fill: $color-primary-2;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
 
     &__input {
@@ -35,12 +50,26 @@
         color: $color-primary-2;
         font-size: 1.6rem;
         background-color: transparent;
-        padding: .4rem 0;
+        padding: 0.4rem 0;
+        width: 100%;
     }
 
     &__input:active {
         border: none;
         outline: none;
     }
-    
+}
+
+.menu-icon {
+    margin-right: auto;
+}
+
+.header-small-screen-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (min-width: 37.5625em) {
+        display: none;
+    }
 }

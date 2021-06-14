@@ -1,4 +1,5 @@
 @import "../../sassStyles/variables";
+@import "../../sassStyles/typography";
 
 .sidebar {
     background-color: $color-primary-3;
@@ -7,33 +8,38 @@
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
 
+    &__nav {
+        margin-top: 3rem;
+
+        @media only screen and (max-width: $bp-smallest)  {
+            margin-top: 5rem;
+        }
+
+    }
+
     &__list {
         font-size: 1.6rem;
         color: $color-text-2;
         list-style: none;
+        transition: all .2s;
 
-        &--link {
+        &-item {
             padding: 1.5rem;
+            cursor: pointer;
+        }
+
+        &-item:hover {
+            transform: translateY(-3px);
+            color: $color-white;
         }
     }
     
+    @media only screen and (max-width: $bp-smallest)  {
+        display: none;
+    }
 
 }
 
-.namebox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-
-    &__icon {
-        fill: #fff;
-        width: 5rem;
-        height: 5rem;
-        margin-right: .5rem;
-    }
-
-    &__text {
-        color:#fff;
-    }
+.logobox {
+    
 }

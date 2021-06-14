@@ -1,6 +1,12 @@
+@import "./sassStyles/variables";
+
 .container {
     display: grid;
     grid-template-columns: [container-start sidebar-start] max-content [sidebar-end main-start] 1fr [main-end container-end];
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: min-content 1fr repeat(2, min-content);
+    min-height: 100vh;
 
+    @media only screen and (max-width: $bp-smallest) {
+        // grid-template-columns: 1fr;
+    }
 }

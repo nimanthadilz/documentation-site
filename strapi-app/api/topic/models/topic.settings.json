@@ -1,0 +1,15 @@
+{
+  "kind": "singleType",
+  "collectionName": "topics",
+  "info": {
+    "name": "topic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
